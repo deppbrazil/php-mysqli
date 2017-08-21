@@ -1,33 +1,34 @@
 <?php
-	
+
 	include ('connection.php');
 
-	$id=0;
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
 	$tel = $_POST['tel'];
 	$endereco = $_POST['endereco'];
 
-	$sql = $mysqli-> prepare("insert into cadastro values (?,?,?,?,?)");
-	$sql-> bind_param("issss",$id,$nome,$email,$endereco)
-	$sql-> execute();
-	$sql-> store_result();
-	$result = $sql-> affected_rows;
+	$query = $mysqli->query("INSERT into cadastro (email, endereco, nome, telefone) values ('".$email."', '".$endereco."', '".$nome."', '".$tel."')");
 
-	if ($result > 0){
+	if($query){
+	?>
+		<!DOCTYPE html>
+			<html>
+				<head>
+				<meta charset="utf-8">
+    			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    			<link rel="stylesheet" type="text/css" href="style.css">
+				<title>Formulário enviado com sucesso!</title>
+				</head>
 
-		echo "<script>
-				alert('Dados inseridos com sucesso!');
-				window.location.href='index.html';
-			</script>";
-	}
+				<body>
+					<div class="container">
+						<h1>Formulário enviado com sucesso =)</h1>
+						<div class="linha"></div>
+					</div>
+				</body>
+			</html>
+	<?php
+}
 
-	else {
 
-		echo "<script>
-				alert('Erro!');
-				window.location.href='index.html';
-			</script>";
-	}
-
-?>

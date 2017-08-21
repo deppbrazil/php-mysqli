@@ -1,2 +1,2 @@
-# php-mysqli
-Form with PHP + MySQLi
+# PHP + MySQLi
+Formulário com banco de dados MySQLi

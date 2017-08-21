@@ -3,17 +3,38 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>PHP + MySQLi</title>
 </head>
 
 <body>
-    <form name="form1" action="process.php" method="post">
-        <p>Nome:<input type="text" name="nome" id="nome" /></p>
-        <p>E-mail:<input type="email" name="email" id="email" /></p>
-        <p>Tel:<input type="tel" name="tel" id="tel" /></p>
-        <p>Endereço:<input type="text" name="endereco" id="enderco" /></p>
-        <p>Enviar:<input type="submit" name="botao" value="cadastrar" /></p>
-    </form>
+    <div class="container">
+        <form name="form1" action="process.php" method="post">
+            <ul class="flex-outer">
+                <li>
+                    <label for="name">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+                </li>
+                <li>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" />
+                </li>
+                <li>
+                    <label for="tel">Tel:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Digite seu telefone" />
+                </li>
+                <li>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" name="endereco" id="enderco" placeholder="Digite seu endereço" />
+                </li>
+                <li>
+                    <button type="submit" name="enviar" value="Enviar">Enviar</button>
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
 
 </html>
