@@ -6,6 +6,13 @@ Configurações do banco de dados em localhost:
 
 * Nome do banco: db_mysqli
 * Nome da tabela: cadastro
-* Campos da tabela:	id (chave primária); nome; email; telefone; endereco; 
+* Campos da tabela:	
+```sqli
+id (chave primária[int]); 
+nome[varchar]; 
+email[varchar]; 
+telefone[varchar]; 
+endereco[text];
+``` 
 	
 
